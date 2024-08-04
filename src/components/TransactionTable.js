@@ -1,25 +1,34 @@
 import React from 'react';
 import TransactionRow from './TransactionRow';
 
-function TransactionTable({ transactions, searchTerm, sortOrder, setSortOrder, deleteTransaction }) {
+function TransactionTable({ transactions, searchTerm, sortOrder, setSortOrder, deleteTransaction, sortBy, setSortBy }) {
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const sortedTransactions = filteredTransactions.sort((a, b) => {
-    if (sortOrder === 'asc') {
-      return a.description.localeCompare(b.description);
-    } else {
-      return b.description.localeCompare(a.description);
+    if (sortBy === 'description') {
+      return sortOrder === 'asc'
+        ? a.description.localeCompare(b.description)
+        : b.description.localeCompare(a.description);
+    } else if (sortBy === 'category') {
+      return sortOrder === 'asc'
+        ? a.category.localeCompare(b.category)
+        : b.category.localeCompare(a.category);
     }
+    return 0; // No sorting
   });
 
   return (
     <table>
       <thead>
         <tr>
-          <th onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>Description</th>
-          <th>Category</th>
+          <th onClick={() => { setSortBy('description'); setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc'); }}>
+            Description
+          </th>
+          <th onClick={() => { setSortBy('category'); setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc'); }}>
+            Category
+          </th>
           <th>Amount</th>
           <th>Date</th>
           <th>Actions</th>

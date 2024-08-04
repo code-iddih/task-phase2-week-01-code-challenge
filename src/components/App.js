@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TransactionTable from './TransactionTable';  // Make sure this path is correct
-import TransactionForm from './TransactionForm';    // Make sure this path is correct
-import SearchBar from './SearchBar';                // Make sure this path is correct
+import TransactionTable from './TransactionTable';  
+import TransactionForm from './TransactionForm';    
+import SearchBar from './SearchBar';                
 
 function App() {
   const [transactions, setTransactions] = useState([]);

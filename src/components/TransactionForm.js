@@ -8,12 +8,17 @@ function TransactionForm({ addTransaction }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!description || !category || !amount || !date) {
+      alert('All fields are required');
+      return;
+    }
+
     const newTransaction = {
       id: Math.random().toString(),
       description,
       category,
       amount: parseFloat(amount),
-      date
+      date,
     };
     addTransaction(newTransaction);
     setDescription('');
@@ -30,12 +35,20 @@ function TransactionForm({ addTransaction }) {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <input
-        type="text"
-        placeholder="Category"
+      <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-      />
+      >
+        <option value="" disabled>Select category</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Food">Food</option>
+        <option value="Gift">Gift</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Housing">Housing</option>
+        <option value="Income">Income</option>
+        <option value="Transportation">Transportation</option>
+      </select>
       <input
         type="number"
         placeholder="Amount"

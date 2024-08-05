@@ -54,7 +54,8 @@ function App() {
       <Header />
       <SearchBar setSearchTerm={setSearchTerm} />
       <TransactionForm addTransaction={addTransaction} />
-      <div className="category-filter">
+      <div className="category-filter"> 
+        <p id='sort'>Sort By :</p>
         <select value={selectedCategory} onChange={handleCategoryChange}>
           <option value="" disabled>Select category</option>
           <option value="Entertainment">Entertainment</option>
@@ -67,6 +68,7 @@ function App() {
           <option value="Transportation">Transportation</option>
         </select>
       </div>
+      <div className='transaction-table'>
       <TransactionTable
         transactions={transactions}
         searchTerm={searchTerm}
@@ -77,6 +79,7 @@ function App() {
         deleteTransaction={deleteTransaction}
         selectedCategory={selectedCategory}
       />
+      </div>
     </div>
   );
 }

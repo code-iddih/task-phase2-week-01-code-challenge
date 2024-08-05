@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import TransactionTable from './TransactionTable';  
-import TransactionForm from './TransactionForm';    
-import SearchBar from './SearchBar';                
+import Header from './Header';
+import TransactionTable from './TransactionTable';
+import TransactionForm from './TransactionForm';
+import SearchBar from './SearchBar';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -24,7 +25,8 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
+      <Header />
       <SearchBar setSearchTerm={setSearchTerm} />
       <TransactionForm addTransaction={addTransaction} />
       <TransactionTable

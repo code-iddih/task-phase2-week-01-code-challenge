@@ -1,10 +1,23 @@
 import React from 'react';
 import TransactionRow from './TransactionRow';
 
-function TransactionTable({ transactions, searchTerm, sortOrder, setSortOrder, deleteTransaction, sortBy, setSortBy }) {
-  const filteredTransactions = transactions.filter((transaction) =>
-    transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+function TransactionTable({
+  transactions,
+  searchTerm,
+  sortOrder,
+  sortBy,
+  setSortOrder,
+  setSortBy,
+  deleteTransaction,
+  selectedCategory,
+}) {
+  const filteredTransactions = transactions
+    .filter((transaction) =>
+      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((transaction) => {
+      return selectedCategory ? transaction.category === selectedCategory : true;
+    });
 
   const sortedTransactions = filteredTransactions.sort((a, b) => {
     if (sortBy === 'description') {
@@ -16,7 +29,7 @@ function TransactionTable({ transactions, searchTerm, sortOrder, setSortOrder, d
         ? a.category.localeCompare(b.category)
         : b.category.localeCompare(a.category);
     }
-    return 0; // No sorting
+    return 0;
   });
 
   return (

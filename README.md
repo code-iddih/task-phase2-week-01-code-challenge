@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+!! =================== Bank of Flatiron =================== !!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+!! ---------------- Overview ---------------- !!
 
-## Available Scripts
+Bank of Flatiron is a React application designed to manage and display a list of recent bank transactions. This project aims to help developers practice working with components, props, state management, event handling, and data fetching in React.
 
-In the project directory, you can run:
+!! ---------------- Features ---------------- !!
 
-### `npm start`
+1. View a table of all transactions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Add new transactions via a form.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Search transactions by description.
 
-### `npm test`
+4. Sort transactions by description or category.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Delete transactions from the list.
 
-### `npm run build`
+!! ---------------- Usage ---------------- !!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<View Transactions> The transactions table displays all bank transactions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<Add Transaction> Fill out the form and submit to add a new transaction to the list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<Search Transactions> Type in the search bar to filter transactions by description.
 
-### `npm run eject`
+<Sort Transactions> Click on the "Description" or "Category" headers to sort transactions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<Delete Transaction> Click the "Delete" button next to a transaction to remove it from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+!! ---------------- Technology Used ---------------- !!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React: A JavaScript library for building user interfaces.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+JSON Server: A fake REST API for prototyping and testing.
 
-## Learn More
+CSS: Styling the user interface.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+JavaScript: The programming language used to build the app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+!! ---------------- Learning Goals ---------------- !!
 
-### Code Splitting
+1. Practice creating and using React components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Understand and implement props and state in React.
 
-### Analyzing the Bundle Size
+3. Manage events and form submissions in React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Fetch and display data from an external source.
 
-### Making a Progressive Web App
+5. Implement search and sorting functionality in a React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the Code!!

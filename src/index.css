@@ -15,11 +15,11 @@ body {
 /* Header */
 h1 {
   text-align: center;
-  color: #333;
+  color: #fff;
 }
 
 .header {
-  background-color: #007bff;
+  background-color: green;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -69,7 +69,7 @@ option {
 form button {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: green;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -79,7 +79,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: rgb(27, 160, 27);
 }
 
 /* Table Styles */
@@ -97,7 +97,7 @@ table {
 }
 
 thead {
-  background-color: #007bff;
+  background-color: green;
   color: #fff;
 }
 
@@ -107,7 +107,7 @@ thead th {
 }
 
 thead th:hover {
-  background-color: #0056b3;
+  background-color: rgb(27, 160, 27);
 }
 
 tbody tr {
@@ -127,6 +127,16 @@ tbody tr:last-child {
   border-bottom: none;
 }
 
+button {
+  background-color: red;
+  border-radius: 4px;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgb(143, 49, 49);
+}
+
 button.delete {
   background-color: #dc3545;
   border: none;
@@ -137,7 +147,7 @@ button.delete {
 }
 
 button.delete:hover {
-  background-color: #c82333;
+  background-color: rgb(27, 160, 27);
 }
 
 /* Search Bar */
@@ -171,3 +181,13 @@ button.delete:hover {
 #category {
   height:60px;
 }
+
+p {
+  font-weight: bolder;
+}
+
+option:hover {
+  outline: none;
+  background-color: green;
+}
+

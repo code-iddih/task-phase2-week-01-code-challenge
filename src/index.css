@@ -40,7 +40,7 @@ form {
   margin-bottom: 20px;
   width: 350px;
   margin-left: 70px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 form input {
@@ -92,7 +92,7 @@ table {
   border-radius: 8px;
   overflow: hidden;
   margin-left: 500px;
-  margin-top: -340px;
+  margin-top: 115px;
   margin-bottom: 50px;
 }
 
@@ -150,10 +150,24 @@ button.delete:hover {
   margin: 10px 0;
   box-sizing: border-box;
   margin-left: 500px;
-  margin-top: 10px;
+  margin-top:5px;
   margin-bottom: -20px;
-  height: 45px;
+  height: 60px;
 }
 
+#search-by {
+  margin-left: 500px;
+  margin-top: 15px;
+}
 /* Category Filter */
 
+.category-filter {
+  height: 0px;
+  margin-top: -455px;
+  width: 450px;
+  margin-left: 1045px;
+}
+
+#category {
+  height:60px;
+}

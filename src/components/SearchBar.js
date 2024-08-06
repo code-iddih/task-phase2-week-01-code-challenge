@@ -2,11 +2,14 @@ import React from 'react';
 
 function SearchBar({ setSearchTerm }) {
   return (
-    <input
+    <div>
+    <p id='search-by'>Search By :</p>
+    <input id='search'
       type="text"
-      placeholder="Search by description"
+      placeholder="Description"
       onChange={(e) => setSearchTerm(e.target.value)}
     />
+    </div>
   );
 }
 

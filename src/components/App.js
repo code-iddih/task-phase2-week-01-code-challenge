@@ -56,7 +56,7 @@ function App() {
       <TransactionForm addTransaction={addTransaction} />
       <div className="category-filter"> 
         <p id='sort'>Sort By :</p>
-        <select value={selectedCategory} onChange={handleCategoryChange}>
+        <select id='category' value={selectedCategory} onChange={handleCategoryChange}>
           <option value="" disabled>Select category</option>
           <option value="Entertainment">Entertainment</option>
           <option value="Fashion">Fashion</option>
